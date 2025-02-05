@@ -171,6 +171,7 @@ h1 {
     }
     
     .data_box2_under {
+        padding-left: 10px;
         display: block;
         margin-right: auto;
     }
