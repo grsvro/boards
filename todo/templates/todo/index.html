@@ -25,17 +25,21 @@ Board | Todo
             {% csrf_token %}
             <div class="main_box">
                 <div class="nyuryoku">
-                    <div class="data_box">
-                        日付<br><input type="date" name="date" class="input_box">
+                    <div class="data_box_top">
+                        <div class="data_box">
+                            日付<br><input type="date" name="date" class="input_box">
+                        </div>
+                        <div class="data_box">
+                            メニュー<br><input type="text" name="menu"  class="input_box" placeholder="メニュー" required>
+                        </div>
                     </div>
-                    <div class="data_box">
-                        メニュー<br><input type="text" name="menu"  class="input_box" placeholder="メニュー">
-                    </div>
-                    <div class="data_box">
-                        ウェイト<br><input type="text" name="weight"  class="input_box" placeholder="kg">
-                    </div>
-                    <div class="data_box">
-                        回数<br><input type="text" name="age"  class="input_box" placeholder="回">
+                    <div class="data_box_under">
+                        <div class="data_box">
+                            ウェイト<br><input type="text" name="weight"  class="input_box" placeholder="kg" required>
+                        </div>
+                        <div class="data_box">
+                            回数<br><input type="text" name="age"  class="input_box" placeholder="回" required>
+                        </div>
                     </div>
                     <input type="submit" class="input_button" value="記録">
                 </div>
@@ -49,13 +53,18 @@ Board | Todo
 <div class="main_box">
     <div class="nyuryoku">
         <div class="data_box2">
-            <div>{{ task.date }}</div>{{ task.menu }} {{ task.weight }}kg {{ task.age }}回 <a href="{% url 'todo:delete' task.id %}" class="delete_button">消去</a>
+            <div class="data_box2_top">
+                <div class="date_box">{{ task.date|date:"n/j l" }}</div>
+                <div class="menu_box">{{ task.menu }}</div>
+            </div>
+            <div class="data_box2_under">
+                <div class="weight_box">{{ task.weight }}kg</div>
+                <div class="age_box">{{ task.age }}回</div>
+            </div>
+            <a href="{% url 'todo:delete' task.id %}" class="delete_button">消去</a>
         </div>
     </div>
 </div>
-<!-- <div>
-  <span>{{ task.date }}{{ task.menu }}{{ task.weight }}{{ task.age }} </span><a href="{% url 'todo:delete' task.id %}">消去</a>
-</div> -->
 {% endfor %}
 
 

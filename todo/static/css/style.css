@@ -4,7 +4,7 @@ body {
     color: #f5f5f5;
 }
 h1 {
-    margin: 30px;
+    margin: 15px;
     text-align: center;
     font-size: 40px;
     color: #FFA23E;
@@ -19,6 +19,14 @@ h1 {
 .nyuryoku {
     display: flex;
     justify-content: center;
+}
+
+.data_box_top {
+    display: flex;
+}
+
+.data_box_under {
+    display: flex;
 }
 
 .data_box {
@@ -73,4 +81,125 @@ h1 {
     border-radius: 10px;
     background-color: #696969;
     text-align: justify;
+    align-items: center;
+}
+
+.data_box2_top {
+    display: flex;
+}
+
+.data_box2_under {
+    display: flex;
+}
+
+.date_box {
+    width: 160px;
+    text-align: right;
+}
+
+.menu_box {
+    width: 210px;
+    text-align: right;
+}
+
+.weight_box {
+    width: 120px;
+    text-align: right;
+}
+
+.age_box {
+    width: 120px;
+    text-align: right;
+}
+
+/* スマホ向け */
+@media screen and (max-width: 760px) {
+    h1 {
+        margin: 15px;
+        text-align: center;
+        font-size: 36px;
+        color: #FFA23E;
+    }
+    .data_box_top {
+        display: block;
+    }
+    
+    .data_box_under {
+        display: block;
+    }
+    .data_box {
+        padding: 5px;
+        margin: 5px;
+        width: 160px;
+        font-size: 26px;
+        border-radius: 10px;
+        background-color: #696969;
+        text-align: justify;
+    }
+    .input_box {
+        width: 100%;
+        font-size: 26px;
+        font-family: "Noto Sans JP", serif;
+        border-radius: 5px;
+        border: 2px solid #696969;
+        text-align: right;
+    }
+    .input_button {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10px;
+        font-family: "Noto Sans JP", serif;
+        font-size: 30px;
+        color: #2f2f2f;
+        background-color: #FFA23E;
+        border: 2px solid #FFA23E;
+    }
+    .delete_button {
+        padding: 5px;
+        margin: 5px;
+        margin-left: auto;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: "Noto Sans JP", serif;
+        font-size: 26px;
+        color: #2f2f2f;
+        background-color: #FFA23E;
+        border: 2px solid #FFA23E;
+    }
+    .data_box2_top {
+        display: block;
+    }
+    
+    .data_box2_under {
+        display: block;
+        margin-right: auto;
+    }
+    .data_box2 {
+        display: flex;
+        padding: 5px;
+        margin: 5px;
+        width: 414px;
+        font-size: 26px;
+        border-radius: 10px;
+        background-color: #696969;
+    }
+    .date_box {
+        width: 160px;
+        margin-left: 15px;
+        text-align: left;
+    }
+    .menu_box {
+        width: 210px;
+        margin-left: 15px;
+        text-align: left;
+    }
+    .weight_box {
+        width: 80px;
+        text-align: left;
+    }
+    
+    .age_box {
+        width: 80px;
+        text-align: left;
+    }
 }
