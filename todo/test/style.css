@@ -1,0 +1,48 @@
+body {
+    background-color: #2f2f2f;
+    font-family: "Noto Sans JP", serif;
+    color: #f5f5f5;
+}
+h1 {
+    color: #FFA23E;
+}
+
+.main_box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nyuryoku {
+    display: flex;
+    justify-content: center;
+}
+
+.data_box {
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #696969;
+    text-align: justify;
+}
+
+.input_box {
+    width: 100%;
+    font-size: 30px;
+    font-family: "Noto Sans JP", serif;
+    border-radius: 5px;
+    border: 2px solid #696969;
+    text-align: right;
+}
+
+.input_button {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    font-family: "Noto Sans JP", serif;
+    font-size: 30px;
+    background-color: #FFA23E;
+    border: 2px solid #FFA23E;
+}

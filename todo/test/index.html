@@ -12,7 +12,7 @@ Board | Todo
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Django Page</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -29,13 +29,13 @@ Board | Todo
                         日付<br><input type="date" name="date" class="input_box">
                     </div>
                     <div class="data_box">
-                        メニュー<br><input type="text" name="menu"  class="input_box" placeholder="メニュー">
+                        メニュー<br><input type="text" name="menu"  class="input_box" placeholder="ダンベルカール">
                     </div>
                     <div class="data_box">
-                        ウェイト<br><input type="text" name="weight"  class="input_box" placeholder="kg">
+                        ウェイト<br><input type="text" name="weight"  class="input_box" placeholder="10kg">
                     </div>
                     <div class="data_box">
-                        回数<br><input type="text" name="age"  class="input_box" placeholder="回">
+                        回数<br><input type="text" name="age"  class="input_box" placeholder="30回">
                     </div>
                     <input type="submit" class="input_button" value="記録">
                 </div>
@@ -48,9 +48,18 @@ Board | Todo
 {% for task in all_task %}
 <div class="main_box">
     <div class="nyuryoku">
-        <div class="data_box2">
-            <div>{{ task.date }}</div>{{ task.menu }} {{ task.weight }}kg {{ task.age }}回 <a href="{% url 'todo:delete' task.id %}" class="delete_button">消去</a>
+        <div class="data_box">
+            {{ task.date }}
         </div>
+        <div class="data_box">
+            {{ task.menu }}
+        </div>
+        <div class="data_box">
+            {{ task.weight }}
+        <div class="data_box">
+            {{ task.age }}
+        </div>
+        <a href="{% url 'todo:delete' task.id %}" class="input_button">消去</a>
     </div>
 </div>
 <!-- <div>

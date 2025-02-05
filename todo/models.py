@@ -5,4 +5,5 @@ from django.db import models
 class Task(models.Model):
     date = models.DateField(auto_now_add=True)
     menu = models.CharField(max_length=100)
-    age = models.IntegerField()
+    weight = models.IntegerField(default=0)
+    age = models.IntegerField(default=0)
